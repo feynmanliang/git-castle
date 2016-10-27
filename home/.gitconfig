@@ -87,7 +87,7 @@
 [merge]
   summary = true
   verbosity = 1
-	tool = vimdiff
+	tool = nvim -d
   conflictstyle = diff3
 [mergetool]
   prompt = false
@@ -104,7 +104,7 @@
   default = tracking
 [core]
   autocrlf = false
-  editor = vim
+  editor = nvim
   excludesfile = ~/.gitignore_global
 [advice]
   statusHints = false
