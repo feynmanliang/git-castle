@@ -87,12 +87,11 @@
 [merge]
   summary = true
   verbosity = 1
-	tool = nvim -d
-  conflictstyle = diff3
+  tool = nvimdiff
 [mergetool]
-  prompt = false
-[mergetool "mvimdiff"]
-  cmd="mvim -c 'Gdiff' $MERGED"     # use fugitive.vim for 3-way merge
+  prompt = true
+[mergetool "nvimdiff"]
+  cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
   keepbackup=false
 [apply]
   whitespace = nowarn
@@ -121,6 +120,7 @@
 [user]
 	name = Feynman Liang
 	email = feynman.liang@gmail.com
+	signingkey = C334F756D217FF62
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
