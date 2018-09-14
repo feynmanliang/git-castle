@@ -49,7 +49,7 @@
 [user]
 	name = Feynman Liang
 	email = feynman.liang@gmail.com
-	signingkey = A5F419FE09CCA269
+	signingkey = 0xA5F419FE09CCA269
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
